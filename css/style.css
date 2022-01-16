@@ -11,7 +11,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   color: var(--neutral-50);
   background-color: var(--zinc-900);
@@ -60,6 +60,7 @@ img {
   position: relative;
   display: grid;
   place-items: center;
+  text-transform: capitalize;
   grid-auto-columns: 100%;
   max-width: 450px; 
   width: 80%;
@@ -78,12 +79,13 @@ img {
 
 .modal-title {
   font-size: 1rem;
+  line-height: 20px;
   margin-bottom: 0;
 }
 
 .modal-paragraph {
   font-size: .8rem;
-  line-height: 28px;
+  line-height: 24px;
   color: #c8c8c8;
 }
 
@@ -331,8 +333,9 @@ img {
 
 .side-by-side h1 {
   font-size: 28px;
+  line-height: 1.5;
   margin: 1em auto 0;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
 }
 
