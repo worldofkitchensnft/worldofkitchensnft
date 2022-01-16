@@ -366,6 +366,13 @@ img {
 .tokenomics-info {
   margin-top: 2em;
 }
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 .bar {
   position: relative;
   display: flex;
@@ -381,7 +388,7 @@ img {
 
 .bar-percentage {
   position: absolute;
-  right: -40px;
+  left: -42px;
   font-weight: bolder;
 }
 .bar:nth-child(1) {
@@ -414,12 +421,16 @@ img {
 }
 .bar:nth-child(7) {
   width:33%;
-  background-color: #fd8888;
+  background-color: #f36767;
 }
 
 .bar:hover {
   color: var(--neutral-50);
-  filter: brightness(1.25);
+  filter: brightness(2);
+}
+
+.text-container p {
+  color: var(--red-900);
 }
 
 .bar-leyend {
