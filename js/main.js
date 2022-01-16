@@ -1,13 +1,9 @@
 import { toggleMenu } from "./functions/toggleMenu.js";
 import { toggleSocials } from "./functions/toggleSocials.js";
 import { barTextEffect } from "./functions/barTextEffect.js";
-
+import { subjectTitle } from "./functions/subjectTitle.js";
+import { toggleModal } from "./functions/toggleModal.js";
 const  w = window;
-
-const form = document.querySelector('.form-container');
-let subject = document.querySelector('.subject');
-let EmailSubjectTitle = document.getElementById('subjectTitle');
-form.addEventListener('submit', (e) => EmailSubjectTitle.value = subject.value );
 
 w.addEventListener('DOMContentLoaded', () => {
   toggleMenu({
@@ -22,4 +18,16 @@ w.addEventListener('DOMContentLoaded', () => {
   })
 
   barTextEffect('.bars .bar', 'ul .bar-leyend')
+  subjectTitle()
+
+  toggleModal({
+    openModal: '.header-cta',
+    modal: '.modal',
+    closeModal: '.modal-close .fa-times'
+  })
+
+  AOS.init({
+    duration: 2000,
+    once:true
+  });
 })

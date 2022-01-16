@@ -6,11 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World of kitchens | Home</title>
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/hamburgers.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/main.js" type="module" defer></script>
+  
 </head>
 
 <body>
@@ -52,12 +55,13 @@
       <section class="side-by-side">
         <h1>Aprende, Juega y Gana en el juego NFT con Camino a la Excelencia</h1>
         <p>World of Kitchens (WOK) es un juego diseñado en un metaverso culinario que otorga la posibilidad del farmeo y la colección de NFTs que podrán ser empleados en un juego de estrategias (RPG) basado en la operacion de un restaurante en diferentes espacios y el control de recursos adaptados a la temática culinaria.</p><br>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="header-cta">
+        <a href="#" class="header-cta">
           <i class="fa-solid fa-book"></i> Whitepaper
         </a>
       </section>
     </header>
   </header>
+
   <main>
     <article class="roadmap" id="roadmap">
       <div class="section-title">
@@ -67,7 +71,7 @@
 
       <section class="timeline-section container">
         <div class="timeline-items">
-          <div class="timeline-item">
+          <div data-aos="fade-right" class="timeline-item">
             <div class="timeline-circle"></div>
             <div class="timeline-date">2022</div>
             <div class="timeline-body">
@@ -83,7 +87,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
+          <div data-aos="fade-left" class="timeline-item">
             <div class="timeline-circle"></div>
             <div class="timeline-date">2022</div>
             <div class="timeline-body">
@@ -101,7 +105,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
+          <div data-aos="fade-right" class="timeline-item">
             <div class="timeline-circle"></div>
             <div class="timeline-date">2022</div>
             <div class="timeline-body">
@@ -191,7 +195,23 @@
           <button type="reset"><i class="fa-solid fa-delete-left"></i> Reset</button>
         </div>
       </form>
-    </article>
+    </article> 
+      <section class="modal">
+        <div class="modal-container">
+          <img src="assets/images/modal-ilustration.svg" alt="Modal Ilustration" class="modal-image">
+          <h2 class="modal-title">Read whitepaper in your preference language</h2>
+          <p class="modal-paragraph">Documentation where you find all you need to know about World of Kitchens</p>
+          <a href="#" class="modal-close"><i class="fas fa-times"></i></a>
+          <div class="modal-buttons">
+            <a target="_blank" rel="noopener noreferrer" href="https://docspa.wokgame.app/" class="modal-cta"> 
+              <img src="assets/images/spanish.png" alt="Spanish flag" class="modal-lang-flag">Spanish
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://whitepaper.wokgame.app/" class="modal-cta"> 
+              <img src="assets/images/english.png" alt="English flag" class="modal-lang-flag"> English
+            </a>
+          </div>
+        </div>
+      </section>
   </main>
 
   <footer class="footer">
@@ -207,6 +227,8 @@
       <a href="#" class="social-link"><img src="./assets/icons/twitter.svg" alt=""></a>
     </section>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>
