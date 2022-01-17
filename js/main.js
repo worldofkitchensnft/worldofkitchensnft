@@ -3,6 +3,7 @@ import { toggleSocials } from "./functions/toggleSocials.js";
 import { barTextEffect } from "./functions/barTextEffect.js";
 import { subjectTitle } from "./functions/subjectTitle.js";
 import { toggleModal } from "./functions/toggleModal.js";
+import { slider } from "./functions/slider.js";
 const  w = window;
 
 w.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +28,13 @@ w.addEventListener('DOMContentLoaded', () => {
   })
 
   AOS.init({
-    duration: 2000,
-    once:true
+    duration: 1000,
   });
+
+  slider({
+    imageContainer: '.images',
+    images: '.image',
+    prevBtn: '.prev',
+    nextBtn: '.next'
+  })
 })

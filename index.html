@@ -30,7 +30,9 @@
 </head>
 
 <body>
+  <!-- Main Header -->
   <header class="header" id="header">
+    <!-- Navigation -->
     <nav class="nav">
       <button class="panel-btn hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
@@ -54,13 +56,13 @@
       <section class="nav-links">
         <a href="#header" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
         <a href="#" class="nav-link"><i class="fa-solid fa-shop"></i> NFT Market</a>
-        <a href="#" class="nav-link"><i class="fa-brands fa-steam-symbol"></i> Gameplay</a>
+        <a href="#gameplay" class="nav-link"><i class="fa-brands fa-steam-symbol"></i> Gameplay</a>
         <a href="#roadmap" class="nav-link"><i class="fa-solid fa-timeline"></i> Roadmap</a>
         <a href="#tokenomics" class="nav-link"><i class="fa-solid fa-chart-line"></i> Tokenomics</a>
         <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a>
       </section>
     </nav>
-
+    <!-- Banner -->
     <header class="banner">
       <section class="side-by-side">
         <img src="https://www.wallpapertip.com/wmimgs/70-703115_chef-wallpapers-top-beautiful-chef-images-65-high.jpg"
@@ -77,8 +79,35 @@
       </section>
     </header>
   </header>
-
+  <!-- Main Content -->
   <main>
+    <!-- GamePlay -->
+    <article class="gameplay container" id="gameplay">
+      <div class="section-title">
+        <span class="pulse"></span>
+        <h2>Gameplay</h2>
+      </div>
+
+      <div class="gameplay-container">
+        <section class="video-container">
+          <h2>Gameplay</h2>
+          <video src="assets/videos/video-gameplay.mp4" controls></video>
+        </section>
+        <section class="carousel">
+          <h2>NFTS</h2>
+          <article class="images">
+            <img src="https://placeimg.com/800/480/animals" alt="" class="image">
+            <img src="https://placeimg.com/800/480/tech" alt="" class="image">
+            <img src="https://placeimg.com/800/480/people" alt="" class="image">
+          </article>
+          <nav class="controls">
+            <button class="button prev"><i class="fas fa-arrow-left"></i></button>
+            <button class="button next"><i class="fas fa-arrow-right"></i></button>
+          </nav>
+        </section>
+      </div>
+    </article>
+    <!-- Roadmap -->
     <article class="roadmap" id="roadmap">
       <div class="section-title">
         <span class="pulse"></span>
@@ -139,7 +168,7 @@
         </div>
       </section>
     </article>
-
+    <!-- Tokenomics -->
     <article class="tokenomics" id="tokenomics">
       <div class="section-title">
         <span class="pulse"></span>
@@ -187,13 +216,13 @@
         </div>
       </article>
     </article>
-
+    <!-- Form -->
     <article class="contact container" id="contact">
       <div class="section-title">
         <span class="pulse"></span>
         <h2>Contact</h2>
       </div>
-      <form action="https://formsubmit.co/worldofkitchensnft@gmail.com" method="POST" class="form-container">
+      <form data-aos="zoom-in" action="https://formsubmit.co/worldofkitchensnft@gmail.com" method="POST" class="form-container">
         <input type="hidden" id="subjectTitle" name="_subject">
         <input type="hidden" name="_template" value="table">
         <div class="input-field">
@@ -218,6 +247,7 @@
         </div>
       </form>
     </article>
+    <!-- Modal Window -->
     <section class="modal">
       <div class="modal-container">
         <img src="assets/images/modal-ilustration.svg" alt="Modal Ilustration" class="modal-image">
@@ -235,7 +265,7 @@
       </div>
     </section>
   </main>
-
+  <!-- Footer -->
   <footer class="footer">
     <img class="footer-image" src="assets/images/bg-footer.png" alt="">
     <div class="footer-texts">
