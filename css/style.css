@@ -23,6 +23,7 @@ body {
 }
 
 body {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -48,6 +49,7 @@ img {
 .modal {
   position: fixed;
   inset: 0;
+  width: 100%;
   background-color: rgba(39, 39, 42, 0.7);
   display: flex;
   opacity: 0;
@@ -63,7 +65,7 @@ img {
   place-items: center;
   text-transform: capitalize;
   grid-auto-columns: 100%;
-  max-width: 450px;
+  max-width: 300px;
   width: 80%;
   margin: auto;
   border-radius: 0.6em;
@@ -324,6 +326,7 @@ img {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 1em;
 }
 /* Carousel - slider */
 .carousel {
@@ -461,11 +464,14 @@ img {
 /* TODO: change the font weight when the font family were chosen */
 .roadmap {
   padding-bottom: 1em;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Main timeline container */
 .timeline-items {
   position: relative;
+  z-index: 300;
   display: flex;
   flex-wrap: wrap;
 }
