@@ -319,6 +319,12 @@ img {
 }
 
 /*------------------------ Gameplay Styles -------------------------- */
+.gameplay {
+  max-width: 1200px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
 /* Carousel - slider */
 .carousel {
   position: relative;
@@ -360,10 +366,10 @@ img {
 
 .video-container video {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 300px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .gameplay-container {
     display: flex;
     gap: 4rem;
@@ -607,15 +613,15 @@ img {
 }
 
 .bar:nth-child(5) {
-  width: 35%;
+  width: 45%;
   background-color: #ef4444;
 }
 .bar:nth-child(6) {
-  width: 33%;
+  width: 43%;
   background-color: #fa5b5b;
 }
 .bar:nth-child(7) {
-  width: 33%;
+  width: 43%;
   background-color: #f36767;
 }
 
