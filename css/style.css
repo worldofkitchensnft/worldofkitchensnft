@@ -42,6 +42,8 @@ img {
   height: auto;
 }
 
+
+
 /*------------------------ Modal Styles -------------------------- */
 .modal {
   position: fixed;
@@ -145,7 +147,8 @@ img {
 
 @media screen and (min-width: 1024px) {
   .modal-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
+    line-height: 28px;
     margin-bottom: 0;
   }
 
@@ -402,9 +405,11 @@ img {
 }
 
 .side-by-side p {
-  line-height: 1.5;
+  line-height: 20px;
   font-size: 14px;
-  padding: 1em;
+  width: 80%;
+  margin: 0 auto;
+  padding: .5em 0 1em;
   text-align: center;
   color: #c8c8c8;
 }
@@ -622,8 +627,12 @@ img {
 .text-container p {
   background-color: rgba(24, 24, 27, 0.2);
   padding: 1em;
-  border-radius: 0.7em;
-  color: var(--red-900);
+  line-height: 22px;
+  text-align: justify;
+  border-top-left-radius: .8em;
+  border-top-right-radius: .8em;
+  color: #f36767;
+  border-bottom: 1px solid var(--neutral-50);
 }
 
 .bar-leyend {
