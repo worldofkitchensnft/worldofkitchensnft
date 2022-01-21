@@ -5,6 +5,7 @@ import { subjectTitle } from "./functions/subjectTitle.js";
 import { toggleModal } from "./functions/toggleModal.js";
 import { slider } from "./functions/slider.js";
 import scrollTopButton from "./functions/scrollTopButton.js";
+import { addToken } from "./functions/addToken.js";
 
 const  w = window;
 
@@ -41,4 +42,6 @@ w.addEventListener('DOMContentLoaded', () => {
   })
 
   scrollTopButton('.scrol-top-btn')
+
+  addToken('.btn-cta')
 })
