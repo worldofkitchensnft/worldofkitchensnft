@@ -1,64 +1,70 @@
-const d = document, w = window;
-w.walletAddress = null
+const d = document,
+  w = window;
+w.walletAddress = null;
 
 function renderData() {
   if (!w.walletAddress) {
-    d.querySelector('.wallet-info').innerHTML = ''
-    d.querySelector('.logoutButton').classList.add('hidden')
-    d.querySelector('.btn-login').classList.remove('hidden')
-    return false
+    d.querySelector(".wallet-info").innerHTML = "";
+    d.querySelector(".logoutButton").classList.add("hidden");
+    d.querySelector(".btn-login").classList.remove("hidden");
+    return false;
   }
 
-  d.querySelector('.wallet-info').innerHTML = `
+  d.querySelector(".wallet-info").innerHTML = `
     <h2>ETH Address:</h2>
-    <p>${w.walletAddress}</p>`
-  d.querySelector('.logoutButton').classList.remove('hidden')
-  d.querySelector('.btn-login').classList.add('hidden')
+    <p>${w.walletAddress}</p>`;
+  d.querySelector(".logoutButton").classList.remove("hidden");
+  d.querySelector(".btn-login").classList.add("hidden");
 }
 
 async function connect() {
   if (w.web3) {
     try {
-      const accounts = await web3.eth.getAccounts()
-      w.walletAddress = accounts[0]
-      w.localStorage.setItem('walletAddress', accounts[0])
-      renderData()
+      const selectedAccount = await window.ethereum
+        .request({
+          method: "eth_requestAccounts",
+        })
+        .then((accounts) => accounts[0])
+        .catch(() => {
+          throw Error("No account selected!");
+        });
+      w.walletAddress = selectedAccount  
+      w.localStorage.setItem("walletAddress", selectedAccount);
+      renderData();
     } catch (error) {
       console.error(error);
     }
   } else {
-    alert('No ETH extension installed.')
+    alert("No ETH extension installed.");
   }
 }
 
 function disconnect() {
-  w.walletAddress = null
-  w.localStorage.removeItem('walletAddress')
-  renderData()
+  w.walletAddress = null;
+  w.localStorage.removeItem("walletAddress");
+  renderData();
 }
 
-w.addEventListener('DOMContentLoaded', async () => {
- if (w.ethereum) {
-    w.web3 = new Web3(ethereum)
-    try {
-      await ethereum.enable();
-    } catch (error) {
-      console.error(error);
-    }
+w.addEventListener("load", async () => {
+  if (w.ethereum) {
+    w.web3 = new Web3(ethereum);
   } else {
-    alert('No ETH extension installed.')
-  }
-  
-   w.walletAddress = w.localStorage.getItem('walletAddress')
-   renderData()
-})
-
-d.addEventListener('click', (e) => {
-  if (e.target.matches('.btn-login') || e.target.matches('.btn-login *')) {
-    connect()
+    alert("No ETH extension installed.");
   }
 
-  if (e.target.matches('.logoutButton') || e.target.matches('.logoutButton *')) {
-    disconnect()
+  w.walletAddress = w.localStorage.getItem("walletAddress");
+  renderData();
+});
+
+d.addEventListener("click", (e) => {
+  if (e.target.matches(".btn-login") || e.target.matches(".btn-login *")) {
+    connect();
   }
-})
+
+  if (
+    e.target.matches(".logoutButton") ||
+    e.target.matches(".logoutButton *")
+  ) {
+    disconnect();
+  }
+});
