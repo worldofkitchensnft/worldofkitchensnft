@@ -121,6 +121,17 @@ img {
   right: 5px;
 }
 
+.wallet-info {
+  text-align: center;
+}
+
+.market-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .6em;
+}
+
 .alert--show {
   opacity: 1;
   visibility: visible;
@@ -277,9 +288,10 @@ img {
 /*------------------------ Utilities Class Styles -------------------------- */
 .grid-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  height: 100%;
   gap: 1rem;
 }
 .flex-center {
@@ -301,6 +313,10 @@ img {
   justify-content: center;
   align-items: center;
   gap: 1em;
+}
+
+.hidden {
+  display: none;
 }
 
 /*------------------------ Navbar Styles -------------------------- */

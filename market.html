@@ -26,6 +26,8 @@
   <link rel="stylesheet" href="./css/style.css">
   <!-- Custom JS File -->
   <script src="./js/main.js" type="module" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js" integrity="sha512-C63V0mFzwl8KV2fRz0QJNKX0d9877urOLSUq5WUq8nUOhDl69hKdGr9mAvl57k47GNjqEMAtiufsvDnk7xs8+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/functions/connectWallet.js" defer></script>
   <script src="./js/index.js" type="module" defer></script>
 </head>
 
@@ -59,26 +61,39 @@
       <a href="index.html#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a>
     </section>
   </nav>
-  <main class="grid-container container">
-    <div class="alert-metamask">
-      <a href="#" class="alert-close"><i class="fas fa-times"></i></a>
-      <h2>You Have Not Metamask Installed</h2>
-      <p>install metamask <a target="_blank" href="https://metamask.io/download/">Here</a></p>
-    </div>
-    <button class="btn btn-cta">
-      <img src="./assets/images/meta-mask-logo.png"
-        alt="Meta Mask Logo" class="btn-cta-logo">
-      <span class="btn-cta-label">
-        Connect Wallet
-      </span>
-    </button>
-    <button class="btn secondary-cta">
-      <img src="./assets/images/logo.png"
-        alt="Meta Mask Logo" class="btn-cta-logo">
-      <span class="btn-cta-label">
-        Add Token
-      </span>
-    </button>
+  <main class="container">
+    <article class="grid-container">
+      <div class="alert-metamask">
+        <a href="#" class="alert-close"><i class="fas fa-times"></i></a>
+        <h2>You Have Not Metamask Installed</h2>
+        <p>install metamask <a target="_blank" href="https://metamask.io/download/">Here</a></p>
+      </div>
+      <section class="wallet-info"></section>
+     <section class="market-buttons">
+        <button class="btn btn-cta btn-login">
+          <img src="./assets/images/meta-mask-logo.png"
+            alt="Meta Mask Logo" class="btn-cta-logo">
+          <span class="btn-cta-label">
+            Connect Wallet
+          </span>
+        </button>
+        <button class="btn btn-cta logoutButton hidden">
+          <img src="./assets/images/meta-mask-logo.png"
+            alt="Meta Mask Logo" class="btn-cta-logo">
+          <span class="btn-cta-label">
+            Logout
+          </span>
+        </button>
+        <button class="btn secondary-cta">
+          <img src="./assets/images/logo.png"
+            alt="Meta Mask Logo" class="btn-cta-logo">
+          <span class="btn-cta-label">
+            Add Token
+          </span>
+        </button>
+     </section>
+
+    </article>
 
   </main>
   <!-- Footer -->
