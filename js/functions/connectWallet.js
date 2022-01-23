@@ -8,13 +8,14 @@ function renderData() {
     d.querySelector(".logoutButton").classList.add("hidden");
     d.querySelector(".btn-login").classList.remove("hidden");
     return false;
+  } else {
+    d.querySelector(".wallet-info").innerHTML = `
+      <h2>ETH Address:</h2>
+      <p>${w.walletAddress}</p>`;
+    d.querySelector(".logoutButton").classList.remove("hidden");
+    d.querySelector(".btn-login").classList.add("hidden"); 
   }
 
-  d.querySelector(".wallet-info").innerHTML = `
-    <h2>ETH Address:</h2>
-    <p>${w.walletAddress}</p>`;
-  d.querySelector(".logoutButton").classList.remove("hidden");
-  d.querySelector(".btn-login").classList.add("hidden");
 }
 
 async function connect() {
@@ -48,10 +49,8 @@ function disconnect() {
 w.addEventListener("load", async () => {
   if (w.ethereum) {
     w.web3 = new Web3(ethereum);
-  } else {
-    alert("No ETH extension installed.");
-  }
-
+  } 
+  
   w.walletAddress = w.localStorage.getItem("walletAddress");
   renderData();
 });
