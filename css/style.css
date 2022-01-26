@@ -533,7 +533,7 @@ img {
 .side-by-side img {
   display: block;
   height: 100%;
-  border-radius: 0 0 .8em .8em;
+  border-radius:.8em;
   box-shadow: 3px 3px 20px 3px rgba(255 132 0 / .35);
 }
 
