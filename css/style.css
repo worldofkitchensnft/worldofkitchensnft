@@ -568,8 +568,25 @@ img {
 
 @media screen and (min-width: 1024px) {
   .banner {
-    height: 690px;
+    height: 740px;
     margin-bottom: 1em;
+  }
+
+  .side-by-side h1 {
+    font-size: 34px;
+    margin: 1em auto 0;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .side-by-side p {
+    line-height: 26px;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+    padding: .5em 0 1em;
+    text-align: center;
+    color: #c8c8c8;
   }
 
   .side-by-side img {
