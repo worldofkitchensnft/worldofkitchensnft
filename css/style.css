@@ -154,15 +154,16 @@ img {
   font-size: 1.5rem;
   border-radius: 50%;
   outline: 0;
-  border: 1px solid var(--red-900);
-  background-color: transparent;
+  border: none;
+  background-color: #991b1b;
   color: var(--neutral-50);
   cursor: pointer;
+  box-shadow: 3px 3px 20px 3px rgba(255 132 0 / .35);
   transition: all 0.3s ease-out;
 }
 
 .scrol-top-btn:hover {
-  background-color: #52525b;
+  background-color: #dc2626;
 }
 
 .hidden {
