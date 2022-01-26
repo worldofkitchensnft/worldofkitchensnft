@@ -568,6 +568,7 @@ img {
 @media screen and (min-width: 1024px) {
   .banner {
     height: 830px;
+    margin-bottom: 3em;
   }
 
   .side-by-side img {
