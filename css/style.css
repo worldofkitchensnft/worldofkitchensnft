@@ -530,6 +530,13 @@ img {
   height: 830px;
 }
 
+.side-by-side img {
+  display: block;
+  height: 100%;
+  border-radius: 0 0 .8em .8em;
+  box-shadow: 3px 3px 20px 3px rgba(255 132 0 / .35);
+}
+
 .side-by-side {
   flex: 1;
   text-align: center;
@@ -553,25 +560,21 @@ img {
   text-align: center;
   color: #c8c8c8;
 }
-.side-by-side img {
-  display: block;
-  height: 100%;
-  border-radius: 0 0 .8em .8em;
-  box-shadow: 3px 3px 20px 3px rgba(255 132 0 / .35);
-}
+
 .side-by-side:nth-child(2) {
   padding-left: 1em;
 }
 
 @media screen and (min-width: 1024px) {
   .banner {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: auto;
+    height: 830px;
   }
+
   .side-by-side img {
-     border-radius: 0 .8em .8em 0;
+    display: block;
+    width: 100%;
+    height: 600px;
+    box-shadow: 3px 3px 20px 3px rgba(255 132 0 / .35);
   }
 }
 
