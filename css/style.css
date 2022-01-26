@@ -541,7 +541,6 @@ img {
 .side-by-side {
   flex: 1;
   text-align: center;
-  margin-bottom: 3em;
 }
 
 .side-by-side h1 {
@@ -574,7 +573,7 @@ img {
 
   .side-by-side h1 {
     font-size: 34px;
-    margin: 1em auto 0;
+    margin-top: 1.3em;
     text-align: center;
     text-transform: capitalize;
   }
