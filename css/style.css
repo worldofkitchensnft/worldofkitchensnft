@@ -44,8 +44,63 @@ img {
   height: auto;
 }
 
+/*------------------------ Loader Styles -------------------------- */
+.loader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background-color: rgb(39, 39, 42);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity .6s;
+  z-index: 400;
+}
 
+.loader-text {
+  font-size: 32px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
 
+.loader-text img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+}
+
+.loader-line {
+  border: 2px solid #52525b;
+  height: 20px;
+  border-radius: 32px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loader-bar {
+  height: 16px;
+  border-radius: 32px;
+  background-color: #18181b;
+  animation: loading 10s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+.show {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
 /*------------------------ Button Meta Mask Styles -------------------------- */
 .btn {
   display: flex;

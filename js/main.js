@@ -6,10 +6,14 @@ import { toggleModal } from "./functions/toggleModal.js";
 import { slider } from "./functions/slider.js";
 import scrollTopButton from "./functions/scrollTopButton.js";
 import { addToken } from "./functions/addToken.js";
+import { loaderHide } from "./functions/loaderHide.js";
 
 const  w = window;
 
 w.addEventListener('DOMContentLoaded', () => {
+  
+  loaderHide()
+
   toggleMenu({
     panelBtn: '.panel-btn',
     panelLinks: '.nav-links',
