@@ -84,7 +84,7 @@ img {
   height: 16px;
   border-radius: 32px;
   background-color: #18181b;
-  animation: loading 10s forwards cubic-bezier(0, 0, 0, 0);
+  animation: loading 8s forwards cubic-bezier(0, 0, 0, 0);
 }
 
 .show {
@@ -826,20 +826,20 @@ img {
 }
 
 .bar:nth-child(4) {
-  width: 50%;
+  width: 57%;
   background-color: #dc2626;
 }
 
 .bar:nth-child(5) {
-  width: 45%;
+  width: 54%;
   background-color: #ef4444;
 }
 .bar:nth-child(6) {
-  width: 43%;
+  width: 50%;
   background-color: #fa5b5b;
 }
 .bar:nth-child(7) {
-  width: 43%;
+  width: 50%;
   background-color: #f36767;
 }
 
